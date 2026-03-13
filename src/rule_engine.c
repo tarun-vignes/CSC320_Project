@@ -1,48 +1,69 @@
 #include "rule_engine.h"
 
-/* Weighted rule set for baseline static classification. */
-DetectionResult run_rules(const Features *features, int threshold) {
-    DetectionResult result;
-    result.score = 0;
-    result.triggered_entropy = 0;
-    result.triggered_strings = 0;
-    result.triggered_imports = 0;
-    result.triggered_header = 0;
+#include "utils.h"
 
-    if (features == NULL) {
-        return result;
+/* Keeps the final score inside the public 0-100 range. */
+static int clamp_score(int score) {
+    if (score < 0) {
+        return 0;
+    }
+    if (score > 100) {
+        return 100;
+    }
+    return score;
+}
+
+int score_features(const Features *features, DetectionResult *result, int threshold) {
+    int score = 0;
+
+    if (features == NULL || result == NULL) {
+        return -1;
     }
 
-    if (features->byte_entropy >= 7.20) {
-        result.score += 35;
-        result.triggered_entropy = 1;
+    reset_detection_result(result, threshold);
+
+    /* Entropy is a rough signal for packing, encryption, or obfuscation. */
+    if (features->entropy > 7.0) {
+        score += 20;
+        log_rule(result, "HIGH_ENTROPY", 20);
+    } else if (features->entropy > 6.0) {
+        score += 10;
+        log_rule(result, "MED_ENTROPY", 10);
     }
 
-    if (features->suspicious_string_hits >= 2) {
-        result.score += 35;
-        result.triggered_strings = 1;
-    } else if (features->suspicious_string_hits == 1) {
-        result.score += 15;
+    /* Keyword volume captures suspicious intent exposed in embedded strings. */
+    if (features->keyword_count > 5) {
+        score += 15;
+        log_rule(result, "MANY_KEYWORDS", 15);
+    } else if (features->keyword_count > 2) {
+        score += 7;
+        log_rule(result, "SOME_KEYWORDS", 7);
     }
 
-    if (features->suspicious_import_hits >= 2) {
-        result.score += 20;
-        result.triggered_imports = 1;
+    /* Dangerous APIs often point to injection or execution behavior. */
+    if (features->api_hit_count > 0) {
+        score += 20;
+        log_rule(result, "DANGEROUS_API", 20);
     }
 
+    /* Executable-looking files receive extra weight. */
     if (features->has_mz_header) {
-        result.score += 10;
-        result.triggered_header = 1;
+        score += 15;
+        log_rule(result, "MZ_HEADER", 15);
     }
 
-    if (result.score < 0) {
-        result.score = 0;
-    }
-    if (result.score > 100) {
-        result.score = 100;
+    /* Embedded destinations and network code raise the risk score further. */
+    if (features->has_url) {
+        score += 10;
+        log_rule(result, "EMBEDDED_URL", 10);
     }
 
-    /* Kept in signature for future threshold-aware calibration logic. */
-    (void)threshold;
-    return result;
+    if (features->has_network) {
+        score += 10;
+        log_rule(result, "NETWORK_CODE", 10);
+    }
+
+    result->score = clamp_score(score);
+    result->is_malware = (result->score >= threshold);
+    return result->score;
 }

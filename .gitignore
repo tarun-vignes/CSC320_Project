@@ -1,6 +1,10 @@
+# Ignore build folders and compiled binaries.
 build/
 *.exe
 *.obj
 *.o
 *.ilk
 *.pdb
+# Ignore generated experiment outputs.
+results/*.csv
+results/*.txt

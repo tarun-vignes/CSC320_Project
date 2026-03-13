@@ -3,7 +3,7 @@
 
 #include "scanner_types.h"
 
-/* Produces a bounded risk score (0-100) and tracks which rules fired. */
-DetectionResult run_rules(const Features *features, int threshold);
+/* Scores extracted features, records fired rules, and sets the verdict flag. */
+int score_features(const Features *features, DetectionResult *result, int threshold);
 
 #endif

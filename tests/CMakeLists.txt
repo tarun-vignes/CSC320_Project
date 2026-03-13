@@ -1,3 +1,4 @@
+## Build the minimal sanity test for the rule engine.
 add_executable(scanner_smoke_test smoke_test.c)
 target_link_libraries(scanner_smoke_test PRIVATE scanner_core)
 add_test(NAME scanner_smoke_test COMMAND scanner_smoke_test)

@@ -1,101 +1,126 @@
 # Rice's Theorem and Practical Malware Detection
 
-## Project Overview
+## Project Purpose
 
-This project implements a static, heuristic malware scanner in C. Its purpose is to support a course study of how Rice's Theorem constrains practical malware detection. The scanner does not attempt to perfectly decide whether an arbitrary program is malicious. Instead, it extracts observable file features and applies weighted rules to classify a target as `benign` or `suspicious`.
+This project implements a static malware scanner in C for a CSC320 research project on how Rice's Theorem constrains practical malware detection. The scanner does not execute programs. It reads files, extracts heuristic indicators, computes a score from `0` to `100`, and classifies each file as `BENIGN` or `MALWARE`.
 
-The project is designed to demonstrate a central theoretical point: any detector that tries to determine non-trivial semantic properties of arbitrary programs will face unavoidable limitations. In practice, malware detection systems therefore rely on approximations, heuristics, and probabilistic judgments rather than perfect decision procedures.
+The academic point is deliberate: perfect malware detection for all possible programs is undecidable, so the implementation focuses on explainable heuristics and measurable tradeoffs rather than claiming perfect certainty.
 
-## Problem Statement
+## Current Product
 
-Rice's Theorem states that every non-trivial semantic property of programs is undecidable. Malware detection is a practical example of this limit. Determining whether a program is malicious depends on its behavior and intent, which are semantic properties rather than simple syntactic facts.
+The repository now contains a working baseline product with:
 
-This project addresses that gap between theory and practice by building a detector that:
+- single-file scanning from the command line,
+- static feature extraction,
+- a weighted rule engine,
+- human-readable reporting,
+- CSV export for experiments,
+- dataset evaluation with accuracy metrics,
+- sample benign and suspicious dataset files.
 
-- analyzes executable-like files without executing them,
-- uses imperfect but explainable heuristic features,
-- produces transparent scores and rule triggers,
-- supports measurement of false positives and false negatives.
+## Scanner Workflow
 
-## Project Goals
+The scanner processes a file in four steps:
 
-- Build a safe malware-analysis prototype in C.
-- Perform static analysis only; no live malware execution.
-- Show how real detectors rely on partial evidence instead of perfect certainty.
-- Provide output suitable for experiments, screenshots, demonstrations, and discussion in a written report.
+1. `main.c` reads the target path and optional CLI arguments.
+2. `feature_extractor.c` extracts static features from the file bytes.
+3. `rule_engine.c` converts those features into a score and fired rules.
+4. `report.c` prints the verdict and feature summary.
 
-## Current Implementation
+## Features Used
 
-The current baseline scanner performs the following steps:
+The current scanner extracts these features:
 
-1. Reads a target file from disk.
-2. Extracts simple static features:
-   - file size,
-   - Shannon byte entropy,
-   - suspicious string indicators,
-   - presence of an `MZ` header,
-   - placeholder import-based indicators.
-3. Applies a weighted rule engine to compute a score from `0` to `100`.
-4. Labels the file as `benign` or `suspicious` based on a configurable threshold.
-5. Prints a transparent report showing extracted features and triggered rules.
+- `file_size`: total file size in bytes
+- `entropy`: Shannon entropy of the file bytes
+- `keyword_count`: suspicious string indicators such as `powershell`, `cmd.exe`, `inject`, or `socket(`
+- `api_hit_count`: suspicious API names such as `VirtualAlloc`, `WriteProcessMemory`, and `CreateRemoteThread`
+- `has_mz_header`: whether the file begins with `MZ`
+- `has_url`: whether the file contains an embedded URL or IP-like pattern
+- `has_network`: whether the file contains network-related code strings such as `connect(` or `recv(`
 
-## Planned Extensions
+## Scoring and Threshold
 
-The baseline is intended to grow into a more complete experiment platform. Planned next steps include:
+The rule engine assigns points to suspicious indicators and clamps the final score to `0-100`.
 
-- parsing PE imports from Windows executables,
-- scanning entire directories of samples,
-- exporting results for evaluation,
-- comparing thresholds across labeled datasets,
-- measuring false-positive and false-negative rates.
+Current default threshold: `50`
 
-These extensions will make it easier to connect the implementation to the theoretical discussion in the paper and presentation.
+- `score < 50`: classify as `BENIGN`
+- `score >= 50`: classify as `MALWARE`
 
-## Project Structure
+This threshold is intentionally configurable because threshold tuning is part of the research story. Changing the threshold changes the false-positive and false-negative tradeoff, which helps demonstrate why heuristic detection is useful but imperfect.
 
-- `src/main.c`: command-line entrypoint and control flow
-- `src/feature_extractor.c`: static feature extraction
-- `src/rule_engine.c`: heuristic scoring logic
-- `src/report.c`: human-readable output
-- `include/`: shared types and function declarations
-- `tests/smoke_test.c`: basic scoring sanity check
-- `docs/experiment-notes.md`: project notes for evaluation design
+## Command-Line Usage
 
-## Build Instructions
+### Build With GCC
 
-### CMake
+```bash
+gcc -std=c17 -Wall -Wextra -Wpedantic -Iinclude src/main.c src/feature_extractor.c src/rule_engine.c src/report.c src/utils.c -o scanner.exe -lm
+gcc -std=c17 -Wall -Wextra -Wpedantic -Iinclude dataset/test_runner.c src/feature_extractor.c src/rule_engine.c src/report.c src/utils.c -o test_runner.exe -lm
+gcc -std=c17 -Wall -Wextra -Wpedantic -Iinclude tests/smoke_test.c src/rule_engine.c src/utils.c -o smoke_test.exe
+```
+
+### Build With CMake
 
 ```bash
 cmake -S . -B build
 cmake --build build
 ```
 
-### GCC
+### Scan One File
 
 ```bash
-gcc -std=c17 -Wall -Wextra -Wpedantic -Iinclude src/main.c src/feature_extractor.c src/rule_engine.c src/report.c -o scanner.exe -lm
+scanner.exe README.md --threshold 50 --csv results/features.csv
 ```
 
-## Usage
+### Run Dataset Evaluation
 
 ```bash
-scanner <path-to-file> --threshold 70
+test_runner.exe 50
 ```
 
-Example:
+The dataset runner scans `dataset/benign/` and `dataset/malware/`, appends per-file data to `results/features.csv`, and writes a summary to `results/report.txt`.
 
-```bash
-scanner sample.exe --threshold 70
-```
+## Repository Layout
 
-## Safety Statement
+- `src/main.c`: command-line entrypoint
+- `src/feature_extractor.c`: static feature extraction and CSV export
+- `src/rule_engine.c`: heuristic scoring and malware decision
+- `src/report.c`: scan report output and evaluation summary writer
+- `src/utils.c`: helper functions for result/rule bookkeeping
+- `include/`: shared structs and function declarations
+- `tests/smoke_test.c`: sanity check for the rule engine
+- `dataset/test_runner.c`: dataset evaluation harness
+- `dataset/benign/`: safe sample inputs
+- `dataset/malware/`: suspicious sample inputs
+- `results/`: generated CSV and evaluation reports
+- `docs/experiment-notes.md`: experiment notes
 
-This project is restricted to static file analysis. It should not be used to execute, detonate, or interact with live malware. Any experimental evaluation should use approved datasets and offline samples in a controlled academic environment.
+## Current Outputs
 
-## Theoretical Relevance
+The single-file scanner prints:
 
-This scanner is intentionally heuristic. That is not a defect in the project design; it is part of the point. The existence of false positives and false negatives helps illustrate why malware detection cannot be made perfect for all possible programs. The system therefore serves as both a software artifact and a concrete demonstration of the theoretical limits described by Rice's Theorem.
+- target file path,
+- score out of `100`,
+- final verdict,
+- extracted feature values,
+- which rules fired and how many points each contributed.
 
-## Status
+The dataset runner writes:
 
-The current version is a working baseline prototype. It compiles, runs, and produces interpretable output, but it is not yet a full research-grade detector. Its present role is to establish the project architecture and provide a foundation for further experiments.
+- `results/features.csv`
+- `results/report.txt`
+
+## March 31 Completion Plan
+
+To make this a stronger final product by March 31, the next work items should be:
+
+1. Add real PE import parsing instead of string-only API detection.
+2. Improve folder scanning so the main scanner can accept a directory directly.
+3. Expand the dataset with at least 20 benign and 20 suspicious offline samples.
+4. Tune thresholds and rule weights using the dataset results.
+5. Add a short evaluation section to the report showing false positives and false negatives.
+
+## Safety Scope
+
+This project is restricted to static analysis of files. It should not be used to execute or detonate live malware. Any evaluation should rely on approved offline samples and labeled datasets.
