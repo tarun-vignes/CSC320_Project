@@ -34,7 +34,7 @@ The current scanner extracts these features:
 - `file_size`: total file size in bytes
 - `entropy`: Shannon entropy of the file bytes
 - `keyword_count`: suspicious string indicators such as `powershell`, `cmd.exe`, `inject`, or `socket(`
-- `api_hit_count`: suspicious API names such as `VirtualAlloc`, `WriteProcessMemory`, and `CreateRemoteThread`
+- `api_hit_count`: suspicious API names found either in PE imports or via string fallback, such as `VirtualAlloc`, `WriteProcessMemory`, and `CreateRemoteThread`
 - `has_mz_header`: whether the file begins with `MZ`
 - `has_url`: whether the file contains an embedded URL or IP-like pattern
 - `has_network`: whether the file contains network-related code strings such as `connect(` or `recv(`
@@ -115,11 +115,11 @@ The dataset runner writes:
 
 To make this a stronger final product by March 31, the next work items should be:
 
-1. Add real PE import parsing instead of string-only API detection.
-2. Improve folder scanning so the main scanner can accept a directory directly.
-3. Expand the dataset with at least 20 benign and 20 suspicious offline samples.
-4. Tune thresholds and rule weights using the dataset results.
-5. Add a short evaluation section to the report showing false positives and false negatives.
+1. Improve folder scanning so the main scanner can accept a directory directly.
+2. Expand the dataset with at least 20 benign and 20 suspicious offline samples.
+3. Tune thresholds and rule weights using the dataset results.
+4. Add a short evaluation section to the report showing false positives and false negatives.
+5. Strengthen PE analysis further with richer DLL/function weighting or section-level signals.
 
 ## Safety Scope
 

@@ -18,7 +18,7 @@ typedef struct {
     double entropy;
     /* Count of suspicious keywords found in the file text view. */
     int keyword_count;
-    /* Count of suspicious API names detected in the file text view. */
+    /* Count of suspicious API names found via PE imports or string fallback. */
     int api_hit_count;
     /* Whether the file begins with the PE-style MZ signature. */
     int has_mz_header;
