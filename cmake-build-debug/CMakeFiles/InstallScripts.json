@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/cmake_install.cmake",
+		"/Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

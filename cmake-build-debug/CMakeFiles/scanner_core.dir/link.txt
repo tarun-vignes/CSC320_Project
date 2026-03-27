@@ -1,0 +1,2 @@
+/usr/bin/ar qc libscanner_core.a CMakeFiles/scanner_core.dir/src/feature_extractor.c.o CMakeFiles/scanner_core.dir/src/rule_engine.c.o CMakeFiles/scanner_core.dir/src/report.c.o CMakeFiles/scanner_core.dir/src/utils.c.o
+/usr/bin/ranlib libscanner_core.a
