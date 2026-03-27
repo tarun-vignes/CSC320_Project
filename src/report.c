@@ -6,9 +6,9 @@
 void print_report(const Features *features, const DetectionResult *result) {
     const char *verdict = result->is_malware ? "MALWARE" : "BENIGN";
 
-    printf("=== MALWARE SCANNER REPORT ===\n");
+    printf("\n=== MALWARE SCANNER REPORT ===\n");
     printf("Target  : %s\n", features->filepath);
-    printf("Score   : %d / 100\n", result->score);
+    printf("Score   : %d / 100 (Threshold: %d)\n", result->score, result->threshold);
     printf("Verdict : %s\n", verdict);
 
     printf("\n--- Features ---\n");
