@@ -60,15 +60,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a3a2f857-7b11-4317-9d73-1dad50ab06df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scanner.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scanner.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scanner_core.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scanner_core.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libscanner_core.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libscanner_core.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/scanner" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/scanner" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test_runner" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test_runner" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/scanner_smoke_test.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/scanner_smoke_test.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/report.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/report.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,7 +336,7 @@
       <workItem from="1774643192786" duration="57000" />
       <workItem from="1774643253473" duration="11000" />
       <workItem from="1774643330097" duration="40000" />
-      <workItem from="1774643465027" duration="1064000" />
+      <workItem from="1774643465027" duration="1675000" />
     </task>
     <servers />
   </component>
