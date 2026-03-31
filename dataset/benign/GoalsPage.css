@@ -1,0 +1,249 @@
+/* ─── Page wrapper ─────────────────────────────── */
+.goals {
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+
+/* ─── Title section — untouched ─────────────────── */
+.goals-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goals-quote {
+  margin: 0.5rem 0 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ─── Two-column layout ──────────────────────────── */
+.goals-primary {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 0 2rem 2rem;
+}
+
+.goals-left {
+  flex: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.goals-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: sticky;
+  top: 1rem;
+}
+
+/* ─── Goal card ──────────────────────────────────── */
+.goal-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: var(--card-bg, #fff);
+  border: 2px solid transparent; /* color set inline */
+  transition: box-shadow 0.2s ease;
+}
+
+.goal-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.goal-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  /* background color set inline via goal.color */
+}
+
+.goal-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.goal-card-streak {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.goal-card-body {
+  padding: 0.75rem 1rem;
+}
+
+/* ─── Task list inside card ──────────────────────── */
+.goal-task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.goal-task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.goal-task-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  pointer-events: none;
+  cursor: default;
+}
+
+.goal-task-checkbox {
+  display: none;
+}
+
+.goal-task-bullet {
+  font-size: 1.1rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.goal-task-name {
+  font-size: 0.9rem;
+  color: var(--text-color, #3E3731);
+}
+
+.goal-task-checkbox:checked + .goal-task-name {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.goal-task-xp {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-color, #6B8E9F);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.goal-no-tasks {
+  font-size: 0.85rem;
+  color: var(--text-muted, #888);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ─── Achievements panel ─────────────────────────── */
+.achievements-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-color, #3E3731);
+  margin: 0;
+}
+
+/* ─── Stat badges (always pinned 4) ──────────────── */
+.stat-badges-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.stat-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--card-bg, #fff);
+  border-radius: 10px;
+  padding: 0.65rem 0.8rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+}
+
+.stat-badge-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.stat-badge-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-badge-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-color, #3E3731);
+  line-height: 1.2;
+}
+
+.stat-badge-label {
+  font-size: 0.7rem;
+  color: var(--text-muted, #888);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ─── Earned badges section ──────────────────────── */
+.earned-badges-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.earned-badges-heading {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted, #888);
+  margin: 0;
+}
+
+.earned-badges-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.earned-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--card-bg, #fff);
+  border-radius: 10px;
+  padding: 0.75rem 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  cursor: default;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.earned-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.earned-badge-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.earned-badge-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-color, #3E3731);
+  text-align: center;
+}
