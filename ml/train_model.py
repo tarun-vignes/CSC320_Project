@@ -8,6 +8,19 @@ from sklearn.metrics import classification_report, accuracy_score, precision_sco
 DATASET_PATH = os.path.join("dataset", "features.csv")
 MODEL_OUTPUT_PATH = os.path.join("models", "model_params.json")
 
+"""
+TRAIN MODEL SCRIPT
+
+What this does:
+1. Loads dataset/features.csv
+2. Uses extracted features as input (X)
+3. Uses label (0 = benign, 1 = malicious) as output (y)
+4. Trains a Logistic Regression model
+5. Saves model weights to models/model_params.json
+
+This JSON is later used by C → Python bridge for predictions
+"""
+
 FEATURE_COLUMNS = [
     "file_size",
     "byte_entropy",
