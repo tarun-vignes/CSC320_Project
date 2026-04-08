@@ -1,0 +1,10 @@
+{
+    "intercept": -6.286109480042479,
+    "coefficients": {
+        "file_size": -3.672078223846269e-06,
+        "byte_entropy": 0.8476035483783899,
+        "suspicious_string_hits": 0.5325781283763271,
+        "suspicious_import_hits": 0.45063762333139107,
+        "has_mz_header": 1.072690262466112e-08
+    }
+}
