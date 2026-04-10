@@ -120,6 +120,21 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dataset/benign" />
+      <recent name="$PROJECT_DIR$/dataset/malware" />
+    </key>
+  </component>
   <component name="RunManager" selected="C/C++ File.main.c">
     <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="csc320_scanner" TARGET_NAME="Continuous" CONFIG_NAME="Debug">
       <method v="2">
@@ -337,6 +352,8 @@
       <workItem from="1774643253473" duration="11000" />
       <workItem from="1774643330097" duration="40000" />
       <workItem from="1774643465027" duration="1675000" />
+      <workItem from="1774969888062" duration="2117000" />
+      <workItem from="1774991397341" duration="2280000" />
     </task>
     <servers />
   </component>
