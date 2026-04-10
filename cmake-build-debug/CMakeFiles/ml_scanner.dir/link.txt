@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/ml_scanner.dir/src/ml_python_main.c.o CMakeFiles/ml_scanner.dir/src/python_ml_bridge.c.o -o ml_scanner  libscanner_core.a -lm

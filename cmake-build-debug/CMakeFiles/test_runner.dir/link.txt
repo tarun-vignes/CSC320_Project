@@ -1,1 +1,1 @@
-/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_runner.dir/dataset/test_runner.c.o -o test_runner  libscanner_core.a -lm
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_runner.dir/src/test_runner.c.o -o test_runner  libscanner_core.a -lm

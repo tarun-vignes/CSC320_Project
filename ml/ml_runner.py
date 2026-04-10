@@ -18,7 +18,7 @@ DEFAULT_PARAMS = {
     }
 }
 
-MODEL_PATH = os.path.join("models", "model_params.json")
+MODEL_PATH = os.path.join("../models", "model_params.json")
 
 def sigmoid(z):
     # Clamp z to avoid overflow in math.exp

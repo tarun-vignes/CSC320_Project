@@ -28,6 +28,8 @@
 /Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/CMakeFiles/ContinuousSubmit.dir
 /Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/CMakeFiles/scanner_core.dir
 /Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/CMakeFiles/scanner.dir
+/Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/CMakeFiles/build_dataset.dir
+/Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/CMakeFiles/ml_scanner.dir
 /Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/CMakeFiles/test_runner.dir
 /Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/CMakeFiles/test.dir
 /Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/CMakeFiles/edit_cache.dir

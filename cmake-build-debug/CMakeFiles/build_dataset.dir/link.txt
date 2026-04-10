@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/build_dataset.dir/src/build_dataset_main.c.o CMakeFiles/build_dataset.dir/src/dataset_exporter.c.o -o build_dataset  libscanner_core.a -lm

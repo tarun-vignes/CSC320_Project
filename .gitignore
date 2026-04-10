@@ -8,3 +8,5 @@ build/
 # Ignore generated experiment outputs.
 results/*.csv
 results/*.txt
+
+dataset/malware

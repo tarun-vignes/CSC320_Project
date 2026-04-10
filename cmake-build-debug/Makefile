@@ -517,6 +517,32 @@ scanner/fast:
 .PHONY : scanner/fast
 
 #=============================================================================
+# Target rules for targets named build_dataset
+
+# Build rule for target.
+build_dataset: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 build_dataset
+.PHONY : build_dataset
+
+# fast build rule for target.
+build_dataset/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/build_dataset.dir/build.make CMakeFiles/build_dataset.dir/build
+.PHONY : build_dataset/fast
+
+#=============================================================================
+# Target rules for targets named ml_scanner
+
+# Build rule for target.
+ml_scanner: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ml_scanner
+.PHONY : ml_scanner
+
+# fast build rule for target.
+ml_scanner/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ml_scanner.dir/build.make CMakeFiles/ml_scanner.dir/build
+.PHONY : ml_scanner/fast
+
+#=============================================================================
 # Target rules for targets named test_runner
 
 # Build rule for target.
@@ -542,29 +568,53 @@ scanner_smoke_test/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/scanner_smoke_test.dir/build.make tests/CMakeFiles/scanner_smoke_test.dir/build
 .PHONY : scanner_smoke_test/fast
 
-dataset/test_runner.o: dataset/test_runner.c.o
-.PHONY : dataset/test_runner.o
+src/build_dataset_main.o: src/build_dataset_main.c.o
+.PHONY : src/build_dataset_main.o
 
 # target to build an object file
-dataset/test_runner.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/dataset/test_runner.c.o
-.PHONY : dataset/test_runner.c.o
+src/build_dataset_main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/build_dataset.dir/build.make CMakeFiles/build_dataset.dir/src/build_dataset_main.c.o
+.PHONY : src/build_dataset_main.c.o
 
-dataset/test_runner.i: dataset/test_runner.c.i
-.PHONY : dataset/test_runner.i
+src/build_dataset_main.i: src/build_dataset_main.c.i
+.PHONY : src/build_dataset_main.i
 
 # target to preprocess a source file
-dataset/test_runner.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/dataset/test_runner.c.i
-.PHONY : dataset/test_runner.c.i
+src/build_dataset_main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/build_dataset.dir/build.make CMakeFiles/build_dataset.dir/src/build_dataset_main.c.i
+.PHONY : src/build_dataset_main.c.i
 
-dataset/test_runner.s: dataset/test_runner.c.s
-.PHONY : dataset/test_runner.s
+src/build_dataset_main.s: src/build_dataset_main.c.s
+.PHONY : src/build_dataset_main.s
 
 # target to generate assembly for a file
-dataset/test_runner.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/dataset/test_runner.c.s
-.PHONY : dataset/test_runner.c.s
+src/build_dataset_main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/build_dataset.dir/build.make CMakeFiles/build_dataset.dir/src/build_dataset_main.c.s
+.PHONY : src/build_dataset_main.c.s
+
+src/dataset_exporter.o: src/dataset_exporter.c.o
+.PHONY : src/dataset_exporter.o
+
+# target to build an object file
+src/dataset_exporter.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/build_dataset.dir/build.make CMakeFiles/build_dataset.dir/src/dataset_exporter.c.o
+.PHONY : src/dataset_exporter.c.o
+
+src/dataset_exporter.i: src/dataset_exporter.c.i
+.PHONY : src/dataset_exporter.i
+
+# target to preprocess a source file
+src/dataset_exporter.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/build_dataset.dir/build.make CMakeFiles/build_dataset.dir/src/dataset_exporter.c.i
+.PHONY : src/dataset_exporter.c.i
+
+src/dataset_exporter.s: src/dataset_exporter.c.s
+.PHONY : src/dataset_exporter.s
+
+# target to generate assembly for a file
+src/dataset_exporter.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/build_dataset.dir/build.make CMakeFiles/build_dataset.dir/src/dataset_exporter.c.s
+.PHONY : src/dataset_exporter.c.s
 
 src/feature_extractor.o: src/feature_extractor.c.o
 .PHONY : src/feature_extractor.o
@@ -614,6 +664,54 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/scanner.dir/build.make CMakeFiles/scanner.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/ml_python_main.o: src/ml_python_main.c.o
+.PHONY : src/ml_python_main.o
+
+# target to build an object file
+src/ml_python_main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ml_scanner.dir/build.make CMakeFiles/ml_scanner.dir/src/ml_python_main.c.o
+.PHONY : src/ml_python_main.c.o
+
+src/ml_python_main.i: src/ml_python_main.c.i
+.PHONY : src/ml_python_main.i
+
+# target to preprocess a source file
+src/ml_python_main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ml_scanner.dir/build.make CMakeFiles/ml_scanner.dir/src/ml_python_main.c.i
+.PHONY : src/ml_python_main.c.i
+
+src/ml_python_main.s: src/ml_python_main.c.s
+.PHONY : src/ml_python_main.s
+
+# target to generate assembly for a file
+src/ml_python_main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ml_scanner.dir/build.make CMakeFiles/ml_scanner.dir/src/ml_python_main.c.s
+.PHONY : src/ml_python_main.c.s
+
+src/python_ml_bridge.o: src/python_ml_bridge.c.o
+.PHONY : src/python_ml_bridge.o
+
+# target to build an object file
+src/python_ml_bridge.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ml_scanner.dir/build.make CMakeFiles/ml_scanner.dir/src/python_ml_bridge.c.o
+.PHONY : src/python_ml_bridge.c.o
+
+src/python_ml_bridge.i: src/python_ml_bridge.c.i
+.PHONY : src/python_ml_bridge.i
+
+# target to preprocess a source file
+src/python_ml_bridge.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ml_scanner.dir/build.make CMakeFiles/ml_scanner.dir/src/python_ml_bridge.c.i
+.PHONY : src/python_ml_bridge.c.i
+
+src/python_ml_bridge.s: src/python_ml_bridge.c.s
+.PHONY : src/python_ml_bridge.s
+
+# target to generate assembly for a file
+src/python_ml_bridge.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ml_scanner.dir/build.make CMakeFiles/ml_scanner.dir/src/python_ml_bridge.c.s
+.PHONY : src/python_ml_bridge.c.s
+
 src/report.o: src/report.c.o
 .PHONY : src/report.o
 
@@ -661,6 +759,30 @@ src/rule_engine.s: src/rule_engine.c.s
 src/rule_engine.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/scanner_core.dir/build.make CMakeFiles/scanner_core.dir/src/rule_engine.c.s
 .PHONY : src/rule_engine.c.s
+
+src/test_runner.o: src/test_runner.c.o
+.PHONY : src/test_runner.o
+
+# target to build an object file
+src/test_runner.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/test_runner.c.o
+.PHONY : src/test_runner.c.o
+
+src/test_runner.i: src/test_runner.c.i
+.PHONY : src/test_runner.i
+
+# target to preprocess a source file
+src/test_runner.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/test_runner.c.i
+.PHONY : src/test_runner.c.i
+
+src/test_runner.s: src/test_runner.c.s
+.PHONY : src/test_runner.s
+
+# target to generate assembly for a file
+src/test_runner.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_runner.dir/build.make CMakeFiles/test_runner.dir/src/test_runner.c.s
+.PHONY : src/test_runner.c.s
 
 src/utils.o: src/utils.c.o
 .PHONY : src/utils.o
@@ -723,25 +845,39 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... build_dataset"
+	@echo "... ml_scanner"
 	@echo "... scanner"
 	@echo "... scanner_core"
 	@echo "... scanner_smoke_test"
 	@echo "... test_runner"
-	@echo "... dataset/test_runner.o"
-	@echo "... dataset/test_runner.i"
-	@echo "... dataset/test_runner.s"
+	@echo "... src/build_dataset_main.o"
+	@echo "... src/build_dataset_main.i"
+	@echo "... src/build_dataset_main.s"
+	@echo "... src/dataset_exporter.o"
+	@echo "... src/dataset_exporter.i"
+	@echo "... src/dataset_exporter.s"
 	@echo "... src/feature_extractor.o"
 	@echo "... src/feature_extractor.i"
 	@echo "... src/feature_extractor.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/ml_python_main.o"
+	@echo "... src/ml_python_main.i"
+	@echo "... src/ml_python_main.s"
+	@echo "... src/python_ml_bridge.o"
+	@echo "... src/python_ml_bridge.i"
+	@echo "... src/python_ml_bridge.s"
 	@echo "... src/report.o"
 	@echo "... src/report.i"
 	@echo "... src/report.s"
 	@echo "... src/rule_engine.o"
 	@echo "... src/rule_engine.i"
 	@echo "... src/rule_engine.s"
+	@echo "... src/test_runner.o"
+	@echo "... src/test_runner.i"
+	@echo "... src/test_runner.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"

@@ -1,0 +1,41 @@
+{
+    "intercept": -1.7107272549673527,
+    "feature_means": {
+        "file_size": 1373421.8125,
+        "entropy": 5.891820166666666,
+        "keyword_count": 0.875,
+        "api_hit_count": 0.5625,
+        "has_mz_header": 0.20833333333333334,
+        "has_url": 0.4166666666666667,
+        "has_network": 0.3125
+    },
+    "feature_stds": {
+        "file_size": 3413567.645417099,
+        "entropy": 1.5529415892897178,
+        "keyword_count": 1.63245018822054,
+        "api_hit_count": 1.1090776309570767,
+        "has_mz_header": 0.4104140790860574,
+        "has_url": 0.49822379545201356,
+        "has_network": 0.4684174352188668
+    },
+    "coefficients": {
+        "file_size": 0.36873705346071944,
+        "entropy": 0.29099859443524,
+        "keyword_count": 0.137124245130542,
+        "api_hit_count": 0.06682231113266879,
+        "has_mz_header": 0.04686160529763815,
+        "has_url": 0.027840899858379196,
+        "has_network": 0.061615290684812314
+    },
+    "rf_intercept": -1.7107272549673527,
+    "rf_coefficient": 3.534904133526333,
+    "feature_columns": [
+        "file_size",
+        "entropy",
+        "keyword_count",
+        "api_hit_count",
+        "has_mz_header",
+        "has_url",
+        "has_network"
+    ]
+}

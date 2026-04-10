@@ -72,28 +72,28 @@ include CMakeFiles/test_runner.dir/flags.make
 CMakeFiles/test_runner.dir/codegen:
 .PHONY : CMakeFiles/test_runner.dir/codegen
 
-CMakeFiles/test_runner.dir/dataset/test_runner.c.o: CMakeFiles/test_runner.dir/flags.make
-CMakeFiles/test_runner.dir/dataset/test_runner.c.o: /Users/josephdimartino/CLionProjects/CSC320_scanner/dataset/test_runner.c
-CMakeFiles/test_runner.dir/dataset/test_runner.c.o: CMakeFiles/test_runner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/test_runner.dir/dataset/test_runner.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_runner.dir/dataset/test_runner.c.o -MF CMakeFiles/test_runner.dir/dataset/test_runner.c.o.d -o CMakeFiles/test_runner.dir/dataset/test_runner.c.o -c /Users/josephdimartino/CLionProjects/CSC320_scanner/dataset/test_runner.c
+CMakeFiles/test_runner.dir/src/test_runner.c.o: CMakeFiles/test_runner.dir/flags.make
+CMakeFiles/test_runner.dir/src/test_runner.c.o: /Users/josephdimartino/CLionProjects/CSC320_scanner/src/test_runner.c
+CMakeFiles/test_runner.dir/src/test_runner.c.o: CMakeFiles/test_runner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/josephdimartino/CLionProjects/CSC320_scanner/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/test_runner.dir/src/test_runner.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_runner.dir/src/test_runner.c.o -MF CMakeFiles/test_runner.dir/src/test_runner.c.o.d -o CMakeFiles/test_runner.dir/src/test_runner.c.o -c /Users/josephdimartino/CLionProjects/CSC320_scanner/src/test_runner.c
 
-CMakeFiles/test_runner.dir/dataset/test_runner.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test_runner.dir/dataset/test_runner.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/josephdimartino/CLionProjects/CSC320_scanner/dataset/test_runner.c > CMakeFiles/test_runner.dir/dataset/test_runner.c.i
+CMakeFiles/test_runner.dir/src/test_runner.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test_runner.dir/src/test_runner.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/josephdimartino/CLionProjects/CSC320_scanner/src/test_runner.c > CMakeFiles/test_runner.dir/src/test_runner.c.i
 
-CMakeFiles/test_runner.dir/dataset/test_runner.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test_runner.dir/dataset/test_runner.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/josephdimartino/CLionProjects/CSC320_scanner/dataset/test_runner.c -o CMakeFiles/test_runner.dir/dataset/test_runner.c.s
+CMakeFiles/test_runner.dir/src/test_runner.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test_runner.dir/src/test_runner.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/josephdimartino/CLionProjects/CSC320_scanner/src/test_runner.c -o CMakeFiles/test_runner.dir/src/test_runner.c.s
 
 # Object files for target test_runner
 test_runner_OBJECTS = \
-"CMakeFiles/test_runner.dir/dataset/test_runner.c.o"
+"CMakeFiles/test_runner.dir/src/test_runner.c.o"
 
 # External object files for target test_runner
 test_runner_EXTERNAL_OBJECTS =
 
-test_runner: CMakeFiles/test_runner.dir/dataset/test_runner.c.o
+test_runner: CMakeFiles/test_runner.dir/src/test_runner.c.o
 test_runner: CMakeFiles/test_runner.dir/build.make
 test_runner: libscanner_core.a
 test_runner: CMakeFiles/test_runner.dir/link.txt

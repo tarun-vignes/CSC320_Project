@@ -12,8 +12,8 @@ from sklearn.metrics import (
     confusion_matrix
 )
 
-DATASET_PATH  = os.path.join("dataset", "features.csv")
-MODEL_OUTPUT  = os.path.join("models", "model_params.json")
+DATASET_PATH = os.path.join("../dataset", "features.csv")
+MODEL_OUTPUT = os.path.join("../models", "model_params.json")
 
 # Must match columns written by dataset_exporter.c
 FEATURE_COLUMNS = [
@@ -25,6 +25,7 @@ FEATURE_COLUMNS = [
     "has_url",
     "has_network"
 ]
+
 
 def main():
     if not os.path.exists(DATASET_PATH):
@@ -96,7 +97,7 @@ def main():
     params = {
         "intercept": float(lr_calibrator.intercept_[0]),
         "feature_means": {col: float(X_train[col].mean()) for col in FEATURE_COLUMNS},
-        "feature_stds":  {col: float(X_train[col].std().clip(1e-9)) for col in FEATURE_COLUMNS},
+        "feature_stds":  {col: float(max(X_train[col].std(), 1e-9)) for col in FEATURE_COLUMNS},
         "coefficients": {
             col: float(imp)
             for col, imp in zip(FEATURE_COLUMNS, model.feature_importances_)
@@ -106,11 +107,12 @@ def main():
         "feature_columns": FEATURE_COLUMNS
     }
 
-    os.makedirs("models", exist_ok=True)
+    os.makedirs("../models", exist_ok=True)
     with open(MODEL_OUTPUT, "w") as f:
         json.dump(params, f, indent=4)
 
     print(f"\nSaved model parameters to {MODEL_OUTPUT}")
+
 
 if __name__ == "__main__":
     main()
