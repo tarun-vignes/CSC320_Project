@@ -38,7 +38,7 @@ if(BUILD_TESTING)
 endif()
 
 # Dataset evaluator for accuracy, precision, and recall experiments.
-add_executable(test_runner dataset/test_runner.c)
+add_executable(test_runner src/test_runner.c)
 target_link_libraries(test_runner PRIVATE scanner_core)
 
 if(MSVC)
