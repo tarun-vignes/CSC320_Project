@@ -59,25 +59,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3a2f857-7b11-4317-9d73-1dad50ab06df" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scanner.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scanner.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scanner_core.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/scanner_core.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/compiler_depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_runner.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/scanner_smoke_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/scanner_smoke_test.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/features.csv" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/features.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/ml/train_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/03f48ca747db8e2aa6a18cb5234bffd89014714d59483ddc8df7b3d3be08c368.hta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/0de8543897c9b92326c552911780ac07e2972f50fa452cbc348f7303aea5b09f.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/2f810da956fed7faf74c8ce2cf65638ccdaa92b282dc7492592d7aedce280c44.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/3c25e70be79c3f4728f257f560a9499f01a42f42d976da4f120f0eec0e9d1309.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/46f5eea70d536f7affe40409d7aaa5fa0009f0dc4538ba2867cb7569737db859.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/50b50b5a67e6dc6c7aa8e285ff79cdc3430867a7e36f316bccab279e155ab893.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/8606bf2c5b1c46df441d3de4d23d4f2dd5832e621f1c3312102cfbd3026ca4be.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/88313d63ba997c3cc9279cb5b1f8450517d08a06c8a074c42e733a8468b42c31.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/8853de0df86223a9a810815f82167dd9970b934d7c0ef6b53b6d913c9fbc43ec.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/8c8f5f095d65d3f33ce89a77dfbe84a79bb29d2e0073a57a23dcc014d0683c2e.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/94714281345e7a8502f05edc3f192bb7889702a5cb2b31adcbae49e5d59c7b8b.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/9fb8a940492ee6095a24b4a34ecfa252a515fb681f16636a8f00b1e0e7d47fe2.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/dc67467a39b70d1cd4c1f7f7a459b35058163592f4a9e8fb4dffcbba98ef210c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/dc807e98a912e76bb17b82f71b21ae50375f3575316ba3751e733f1f35d537b3.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/ed8560c1ac7ceb6983ba995124d5917dc1a00288912387a6389296637d5f815c.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/fd47d510225f93555ed1c3454f9d2fb299f08d9845cba08a096be501e3e1e084.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/malware/fe265b0d23b986e39cf974a0be6f238f68d3d686c401866ba8a87e9a23cde0be.msi" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +88,13 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -112,32 +119,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "C/C++ File.main.c.executor": "Run",
-    "CMake Application.scanner.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "ctest.advertisement.all.test.configuration.is.created": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/josephdimartino/CLionProjects/CSC320_scanner",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;C/C++ File.main.c.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.scanner.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/josephdimartino/CLionProjects/CSC320_scanner&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -149,11 +157,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/dataset/malware" />
       <recent name="$PROJECT_DIR$/ml/zips" />
       <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/dataset/benign" />
     </key>
   </component>
   <component name="RunManager" selected="C/C++ File.main.c">
@@ -375,7 +383,8 @@
       <workItem from="1774643465027" duration="1675000" />
       <workItem from="1774969888062" duration="2117000" />
       <workItem from="1774991397341" duration="2280000" />
-      <workItem from="1775844851576" duration="6663000" />
+      <workItem from="1775844851576" duration="9716000" />
+      <workItem from="1775860617147" duration="2572000" />
     </task>
     <servers />
   </component>
