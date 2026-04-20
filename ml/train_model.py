@@ -56,8 +56,8 @@ def main():
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    predictions      = model.predict(X_test)
-    probabilities    = model.predict_proba(X_test)[:, 1]
+    predictions = model.predict(X_test)
+    probabilities = model.predict_proba(X_test)[:, 1]
 
     print("\nModel Evaluation")
     print("----------------")

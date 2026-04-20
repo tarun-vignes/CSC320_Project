@@ -51,7 +51,7 @@ def main():
 
     params = load_params()
     intercept = params["intercept"]
-    coefs     = params["coefficients"]
+    coefs = params["coefficients"]
 
     z = intercept + sum(coefs[k] * features[k] for k in features)
 
@@ -59,6 +59,7 @@ def main():
     label = 1 if probability >= 0.5 else 0
 
     print(json.dumps({"probability": round(probability, 6), "label": label}))
+
 
 if __name__ == "__main__":
     main()
