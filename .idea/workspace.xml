@@ -58,12 +58,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3a2f857-7b11-4317-9d73-1dad50ab06df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project_desc.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml/ml_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/ml/ml_runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/ml/train_model.py" afterDir="false" />
-    </list>
+    <list default="true" id="a3a2f857-7b11-4317-9d73-1dad50ab06df" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -370,7 +365,7 @@
       <workItem from="1774991397341" duration="2280000" />
       <workItem from="1775844851576" duration="9716000" />
       <workItem from="1775860617147" duration="2572000" />
-      <workItem from="1776653089571" duration="1013000" />
+      <workItem from="1776653089571" duration="1165000" />
     </task>
     <servers />
   </component>
