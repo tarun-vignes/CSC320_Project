@@ -25,3 +25,10 @@ and from there a few bridge files were created to run the hybrid engine. For bet
 visuals on the ML model, a python program (visualize_model.py) was created to show 
 three different graphs of the results.
 ```
+
+# Running the Scanner (CLI)
+```shell
+
+```
+
+# Data Flow 
