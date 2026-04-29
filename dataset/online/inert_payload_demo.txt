@@ -1,0 +1,21 @@
+MZ
+This is an inert classroom demo sample for static malware analysis.
+It is not executable and contains only text indicators.
+
+Suspicious strings for scanner testing:
+powershell -nop -w hidden
+cmd.exe /c whoami
+VirtualAlloc
+WriteProcessMemory
+CreateRemoteThread
+WinExec
+payload
+inject
+encrypt
+ransom
+socket(
+connect(
+recv(
+send(
+http://198.51.100.42/stage.bin
+https://example.invalid/c2

